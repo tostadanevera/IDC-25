@@ -1,0 +1,51 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
+{
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/src",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/.pio/libdeps/native/Unity/src",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/lib",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include/adapters",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include/core",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include/ports",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/lib/adapters",
+                "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/lib/core",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/src",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/.pio/libdeps/native/Unity/src",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/lib",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include/adapters",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include/core",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/include/ports",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/lib/adapters",
+                    "/home/juop12/Desktop/UPV-IDC-Proyecto/Arduino/lib/core",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60118",
+                "UNIT_TEST",
+                "__PLATFORMIO_BUILD_DEBUG__",
+                ""
+            ],
+            "cppStandard": "gnu++14",
+            "compilerPath": "/usr/bin/gcc",
+            "compilerArgs": [
+                ""
+            ]
+        }
+    ],
+    "version": 4
+}
