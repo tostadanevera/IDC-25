@@ -1,27 +1,28 @@
-#include "core/AccessController.h"
-#include "ports/OutputDevices.h"
-#include "ports/Database.h"
-#include "ports/Notifier.h"
-#include <string>
-using std::string;
+#include "../../include/core/AccessController.h"
 
-AccessController::AccessController(Database& db, Notifier& notifier, OutputDevices& output)
-    : db(db), notifier(notifier), output(output) {}
+AccessController::AccessController(Database& db, OutputDevices& output)
+    : db(db), output(output) {}
 
-void AccessController::begin() {
-    // Inicialización si hiciera falta
+void AccessController::addNotifier(Notifier* notifier) {
+    notifiers.push_back(notifier);
 }
 
+void AccessController::begin() {}
+
 bool AccessController::onCardRead(const std::string& uid) {
-    if (db.isAuthorized(uid)) {
+    bool authorized = db.isAuthorized(uid);
+    if (authorized) {
         output.grantAccess();
-        notifier.notifyAccessGranted(uid);
+        for (auto n : notifiers) {
+            n->notifyAccessGranted(uid);
+        }
     } else {
         output.denyAccess();
-        notifier.notifyAccessDenied(uid);
+        for (auto n : notifiers) {
+            n->notifyAccessDenied(uid);
+        }
     }
-
-    return db.isAuthorized(uid);
+    return authorized;
 }
 
 bool AccessController::registerCard(const std::string& uid) {
